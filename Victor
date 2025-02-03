@@ -111,7 +111,7 @@ async function checkMember(member) {
         if (!logChannel) return;
 
         if (ageDays < 7 || Math.abs(ageDays - mainAccountAgeDays) < 7) {
-            const simulatedIP = '123.45.${Math.floor(Math.random() * 255)}.${Math.floor(Math.random() * 255)}';
+            const simulatedIP = `123.45.${Math.floor(Math.random() * 255)}.${Math.floor(Math.random() * 255)}`;
             const ipInfo = await ipChecker.getIPInfo(simulatedIP);
 
             logChannel.send(⚠️ **Alvo suspeito**: ${member.user.tag} (ID: ${member.id})\nPossível vínculo com a conta principal.);
